@@ -13,17 +13,21 @@ const Tabs = ({ tabs }) => {
   };
 
   return (
-    <Box sx={{ width: '100%', typography: 'body1' }}>
+    <Box sx={{ width: '100%', typography: 'body1',}}>
       <TabContext value={value}>
-        <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
-          <TabList onChange={handleChange} aria-label="lab API tabs example">
+        <Box sx={{ borderColor: 'divider' }}>
+          <TabList 
+            onChange={handleChange} 
+            aria-label="lab API tabs example"
+            variant="fullWidth"  // Makes the tabs take full width
+          >
             {tabs.map((tab) => (
               <Tab key={tab.value} label={tab.label} value={tab.value} />
             ))}
           </TabList>
         </Box>
         {tabs.map((tab) => (
-          <TabPanel key={tab.value} value={tab.value}>
+          <TabPanel sx={{ p: { xs: 2, sm: 2 ,md:5 }}}  key={tab.value} value={tab.value}>
             {tab.content}
           </TabPanel>
         ))}
