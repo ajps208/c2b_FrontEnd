@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react'
-import Sidebar from './SideBar'
-import Navbar from './NavBar'
+import Sidebar from '../../COMMON/SideBar'
+import Navbar from '../../COMMON/NavBar'
 import Tabs from '@/COMMON/Tabs';
 import { Grid } from '@mui/material';
 import Shops from '../../app/Shops/Shops';
