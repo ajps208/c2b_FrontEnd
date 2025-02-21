@@ -4,7 +4,7 @@ import Sidebar from '../../COMMON/SideBar'
 import Navbar from '../../COMMON/NavBar'
 import Tabs from '@/COMMON/Tabs';
 import { Grid } from '@mui/material';
-import Shops from '../../app/Shops/Shops';
+import Shops from '../Shops/Shops';
 
 export const UserDashboard = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -18,12 +18,8 @@ export const UserDashboard = () => {
       ];
   return (
     <>
-     <Navbar onClose={toggleSidebar}/>
-     <Sidebar  open={sidebarOpen} onClose={toggleSidebar} />
      <Grid container sx={{width:"100%",height:"90.8vh",backgroundColor:"#FAF9F6"}}>
      <Tabs tabs={tabsData} />
-
-      
       </Grid>
     </>
   )

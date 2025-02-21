@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { Grid, Typography } from "@mui/material";
 import { shops } from "../../../DemoData";
-import ShopCard from "../../USER/Components/ShopCards";
 import FilterComponent from "@/COMMON/FilterComponent";
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import StarIcon from "@mui/icons-material/Star";
+import CardComponent from "@/COMMON/Cards";
 
 // Extract unique categories and locations
 const categories = [...new Set(shops.map((shop) => shop.category))];
@@ -30,20 +32,37 @@ const Shops = () => {
     { label: "Ratings", type: "checkbox", options: [4.0, 4.5, 4.7, 4.8, 5.0], state: minRating, setState: setMinRating },
   ];
 
+  // Configure shop card info items
+  const shopInfoItems = [
+    {
+      icon: <StarIcon color="warning" />,
+      content: (shop) => `${shop.ratings} (${shop.total_reviews} reviews)`
+    },
+    {
+      icon: <LocationOnIcon color="action" />,
+      content: "location"
+    }
+  ];
+
   return (
     <Grid container spacing={2} sx={{ mt: 1 }}>
       <FilterComponent filters={filters} showFilters={showFilters} toggleFilters={toggleFilters} />
-
       <Grid item xs={12} sm={9} md={10}>
         <Typography variant="h5" fontWeight="bold" gutterBottom>
           Explore Shops
         </Typography>
-
         <Grid container spacing={2}>
           {filteredShops.length > 0 ? (
             filteredShops.map((shop) => (
               <Grid item key={shop.id} xs={12} sm={6} md={3}>
-                <ShopCard shop={shop} />
+                <CardComponent 
+                  item={shop}
+                  title="name"
+                  infoItems={shopInfoItems}
+                  chips="offers"
+                  buttonText="View Shop"
+                  routePath="/Shops"
+                />
               </Grid>
             ))
           ) : (

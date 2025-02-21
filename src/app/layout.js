@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { Menu } from "@/COMMON/Menu";
+import { Grid } from "@mui/material";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +22,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+        <Menu />
+        <Grid container sx={{width:"100%",height:"90.8vh",backgroundColor:"#FAF9F6"}}>
         {children}
+        </Grid>
       </body>
     </html>
   );
