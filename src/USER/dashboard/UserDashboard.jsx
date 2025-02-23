@@ -18,7 +18,7 @@ export const UserDashboard = () => {
       ];
   return (
     <>
-     <Grid container sx={{width:"100%",height:"90.8vh",backgroundColor:"#FAF9F6"}}>
+     <Grid container sx={{width:"100%",height:"100%",}}>
      <Tabs tabs={tabsData} />
       </Grid>
     </>

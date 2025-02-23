@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Menu />
-        <Grid container sx={{width:"100%",height:"90.8vh",backgroundColor:"#FAF9F6"}}>
+        <Grid container sx={{width:"100%",height:"93vh",p:1.5}}>
         {children}
         </Grid>
       </body>

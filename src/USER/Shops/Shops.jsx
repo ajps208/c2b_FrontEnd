@@ -45,7 +45,7 @@ const Shops = () => {
   ];
 
   return (
-    <Grid container spacing={2} sx={{ mt: 1 }}>
+    <Grid container spacing={2} sx={{ mt: 1,width:"100%",height:"100%"}}>
       <FilterComponent filters={filters} showFilters={showFilters} toggleFilters={toggleFilters} />
       <Grid item xs={12} sm={9} md={10}>
         <Typography variant="h5" fontWeight="bold" gutterBottom>
