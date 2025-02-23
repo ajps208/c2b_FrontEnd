@@ -6,13 +6,7 @@ const orders = [
   { id: 1, name: "Product A", qty: 2, price: 50, image: "https://via.placeholder.com/50" },
   { id: 2, name: "Product B", qty: 1, price: 30, image: "https://via.placeholder.com/50" },
   { id: 3, name: "Product C", qty: 3, price: 75, image: "https://via.placeholder.com/50" },
-  { id: 3, name: "Product C", qty: 3, price: 75, image: "https://via.placeholder.com/50" },
-  { id: 3, name: "Product C", qty: 3, price: 75, image: "https://via.placeholder.com/50" },
-  { id: 3, name: "Product C", qty: 3, price: 75, image: "https://via.placeholder.com/50" },
-  { id: 3, name: "Product C", qty: 3, price: 75, image: "https://via.placeholder.com/50" },
-  { id: 3, name: "Product C", qty: 3, price: 75, image: "https://via.placeholder.com/50" },
-  { id: 3, name: "Product C", qty: 3, price: 75, image: "https://via.placeholder.com/50" },
-  { id: 3, name: "Product C", qty: 3, price: 75, image: "https://via.placeholder.com/50" },
+
 ];
 
 const BuyList = () => {
@@ -34,7 +28,6 @@ const BuyList = () => {
           width: "100%",
           height: "33vh",
           overflow: "auto",
-          backgroundColor: "#ffffff",
           p: 1,
           borderRadius: 2,
           boxShadow: 2,

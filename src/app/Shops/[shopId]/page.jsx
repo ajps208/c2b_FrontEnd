@@ -135,7 +135,6 @@ const ShopDetails = () => {
       sx={{
         mt: 1,
         width: "100%",
-        backgroundColor: "orange",
         padding: "0px 20px",
       }}
     >
@@ -244,7 +243,6 @@ const ShopDetails = () => {
         container
         sx={{
           width: "100%",
-          backgroundColor: "white",
           display: "flex",
           flexDirection: { xs: "column", sm: "column", md: "row" },
           flexWrap: "nowrap", // Prevents the Buy Section from expanding
@@ -257,7 +255,6 @@ const ShopDetails = () => {
           sm={12}
           md={9.5}
           sx={{
-            backgroundColor: "whitesmoke",
             display: "flex",
             flexDirection: { xs: "column", sm: "column", md: "row" },
             justifyContent: "center",
@@ -276,7 +273,7 @@ const ShopDetails = () => {
             xs={12}
             sm={9}
             md={10}
-            sx={{ backgroundColor: "tomato", p: 1 }}
+            sx={{ p: 1 }}
           >
             <Box
               display="flex"
@@ -336,21 +333,7 @@ const ShopDetails = () => {
                         imageKey="images"
                       />
                     </Grid>
-                    <Grid item key={product.id} xs={12} sm={6} md={4} lg={3}>
-                      <CardComponent
-                        item={product}
-                        title="name"
-                        infoItems={productInfoItems}
-                        chips={(item) =>
-                          item.variants && item.variants.length > 0
-                            ? [`${item.variants.length} variants available`]
-                            : []
-                        }
-                        buttonText="Add to Cart"
-                        buttonAction={() => addToCart(product)}
-                        imageKey="images"
-                      />
-                    </Grid>
+    
                    
                  </>
                 ))
@@ -378,7 +361,6 @@ const ShopDetails = () => {
           md={2.5}
           sx={{
             width: "100%",
-            backgroundColor: "sienna",
             maxHeight:"60vh"
           }}
         >

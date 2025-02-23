@@ -11,7 +11,6 @@ const FilterComponent = ({ filters, showFilters, toggleFilters }) => {
       sx={{
         p: 2,
         border: "1px solid black",
-        backgroundColor: "white",
         borderRadius: "8px",
         height: "fit-content", // Will adjust to content height
         maxHeight: "500px", // Maximum height constraint
