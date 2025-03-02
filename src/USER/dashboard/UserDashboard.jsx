@@ -8,11 +8,7 @@ import Shops from '../Shops/Shops';
 import Dashboard1 from './DashBoard';
 
 export const UserDashboard = () => {
-    const [sidebarOpen, setSidebarOpen] = useState(false);
-    const toggleSidebar = () => {
-        setSidebarOpen(!sidebarOpen);
-      };
-
+  
       const tabsData = [
         { label: 'Shops', value: '1', content: <Shops></Shops>},
         { label: 'DashBoard', value: '2', content:<Dashboard1></Dashboard1> },
