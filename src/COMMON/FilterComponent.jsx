@@ -1,13 +1,13 @@
 import React from "react";
 import { Grid, Typography, FormControlLabel, Checkbox, Select, MenuItem, Button } from "@mui/material";
 
-const FilterComponent = ({ filters, showFilters, toggleFilters }) => {
+const FilterComponent = ({ filters, showFilters, toggleFilters,defaultMd=2 }) => {
   return (
     <Grid
       item
       xs={12}
       sm={3}
-      md={2}
+      md={defaultMd}
       sx={{
         p: 2,
         border: "1px solid black",
