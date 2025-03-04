@@ -1,17 +1,17 @@
 "use client";
 import Tabs from "@/COMMON/Tabs";
-import Dashboard1 from "@/USER/dashboard/DashBoard";
-import Shops from "@/USER/Shops/Shops";
+
 import { Grid } from "@mui/material";
 import React from "react";
 import Dashboard2 from "./Dashboard2";
 import Products from "./Products";
+import ShopOrdersPage from "./Orders";
 
 const AdminDashboard = () => {
   const tabsData = [
     { label: "DashBoard", value: "1", content: <Dashboard2></Dashboard2> },
     { label: "Products", value: "2", content: <Products></Products> },
-    { label: "Orders", value: "3", content: <Shops></Shops> },
+    { label: "Orders", value: "3", content: <ShopOrdersPage></ShopOrdersPage> },
   ];
   return (
     <>
